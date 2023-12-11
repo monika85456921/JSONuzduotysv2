@@ -51,15 +51,15 @@ favFromLS();
 
 const istrinti = (id) => {
   const isLS = JSON.parse(localStorage.getItem("favorites"));
-  const rasti = isLS.findindex((movie) => movie.id === id);
+  const rasti = isLS.findIndex((movie) => movie.id === id);
   console.log(rasti);
 
-  // if(findindex > -1){
-  //     isLS.splice(findindex,1)
-  //     console.log(`Filmas istrintas ${istLS[findindex -1]}`)
-  // }
-  // else{
-  //     console.log("Filmas nerastas")
-  // }
+  if(rasti > -1){
+      isLS.splice(rasti,1)
+      console.log(`Filmas istrintas ${isLS[rasti -1]}`)
+  }
+  else{
+      console.log("Filmas nerastas")
+  }
 };
 istrinti(829280);
